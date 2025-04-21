@@ -1,0 +1,33 @@
+# Dependency directories
+node_modules/
+npm-debug.log
+
+# Optional npm cache directory
+.npm
+
+# Yarn integrity file
+.yarn-integrity
+
+# Editor directories and files
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+# Environment variables file
+.env
+.poolConfig
+
+
+# Log files
+logs/
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Custom files or directories to ignore

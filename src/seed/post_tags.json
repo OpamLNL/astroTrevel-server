@@ -1,0 +1,62 @@
+[
+  {
+    "post_id": 1,
+    "tag_id": 38
+  },
+  {
+    "post_id": 1,
+    "tag_id": 41
+  },
+  {
+    "post_id": 1,
+    "tag_id": 44
+  },
+  {
+    "post_id": 2,
+    "tag_id": 39
+  },
+  {
+    "post_id": 2,
+    "tag_id": 38
+  },
+  {
+    "post_id": 3,
+    "tag_id": 40
+  },
+  {
+    "post_id": 4,
+    "tag_id": 38
+  },
+  {
+    "post_id": 5,
+    "tag_id": 42
+  },
+  {
+    "post_id": 6,
+    "tag_id": 45
+  },
+  {
+    "post_id": 7,
+    "tag_id": 39
+  },
+  {
+    "post_id": 8,
+    "tag_id": 41
+  },
+  {
+    "post_id": 8,
+    "tag_id": 43
+  },
+  {
+    "post_id": 9,
+    "tag_id": 46
+  },
+  {
+    "post_id": 10,
+    "tag_id": 44
+  },
+  {
+    "post_id": 10,
+    "tag_id": 38
+  }
+]

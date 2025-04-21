@@ -1,0 +1,485 @@
+[
+  {
+    "id": 1,
+    "name": "Карпати, Україна",
+    "description": "Гірська місцевість з мінімальним світловим забрудненням, ідеальна для спостереження метеорних дощів та Молочного Шляху.",
+    "latitude": 48.1533,
+    "longitude": 24.5000,
+    "photoUrl": "/img/locations/karpaty.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Долина Смерті, США",
+    "description": "Один з найтемніших національних парків США з винятково чистим небом для астрофотографії.",
+    "latitude": 36.5054,
+    "longitude": -117.0794,
+    "photoUrl": "/img/locations/death_valley.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Атакама, Чилі",
+    "description": "Найсухіше місце на Землі з понад 300 ясними ночами на рік. Тут розташовані найкращі обсерваторії світу.",
+    "latitude": -24.5000,
+    "longitude": -69.2500,
+    "photoUrl": "/img/locations/atacama.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Канарські острови, Іспанія",
+    "description": "Тут працюють світові астрономічні центри, а небо захищене спеціальним законом від забруднення.",
+    "latitude": 28.2916,
+    "longitude": -16.6291,
+    "photoUrl": "/img/locations/canary_islands.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Маунт-Джон, Нова Зеландія",
+    "description": "Регіон Маккензі — міжнародний заповідник темного неба з доступом до південного неба.",
+    "latitude": -43.9855,
+    "longitude": 170.4653,
+    "photoUrl": "/img/locations/mount_john.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Острів Пасхи",
+    "description": "Ізольований острів посеред Тихого океану — ідеальне місце для спостереження за зорями без світлового шуму.",
+    "latitude": -27.1127,
+    "longitude": -109.3497,
+    "photoUrl": "/img/locations/easter_island.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Синай, Єгипет",
+    "description": "Гірська пустеля з темним нічним небом. Часто проводять астротури з бедуїнами.",
+    "latitude": 28.5335,
+    "longitude": 33.9166,
+    "photoUrl": "/img/locations/sinai.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Наміб, Намібія",
+    "description": "Одна з найстаріших пустель світу, де можна побачити Чумацький Шлях неозброєним оком.",
+    "latitude": -24.7000,
+    "longitude": 15.2833,
+    "photoUrl": "/img/locations/namib.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Лофотенські острови, Норвегія",
+    "description": "Північне сяйво над фіордами — унікальний астрономічний досвід для мандрівників взимку.",
+    "latitude": 68.2000,
+    "longitude": 14.6000,
+    "photoUrl": "/img/locations/lofoten.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Байконур, Казахстан",
+    "description": "Окрім чистого неба, тут можна побачити реальні космічні запуски ракети з космодрому.",
+    "latitude": 45.6167,
+    "longitude": 63.3167,
+    "photoUrl": "/img/locations/baikonur.jpg"
+  },
+  {
+    "id": 11,
+    "name": "Гаваї, Мауна-Кеа",
+    "description": "Вулканічна вершина з висотою понад 4000 м — одна з кращих точок для спостереження зірок у світі.",
+    "latitude": 19.8206,
+    "longitude": -155.4681,
+    "photoUrl": "/img/locations/mauna_kea.jpg"
+  },
+  {
+    "id": 12,
+    "name": "Сарос, Туреччина",
+    "description": "Популярна локація для повного сонячного затемнення, особливо серед астрономів-любителів.",
+    "latitude": 40.5871,
+    "longitude": 26.7242,
+    "photoUrl": "/img/locations/saros.jpg"
+  },
+  {
+    "id": 13,
+    "name": "Фрейзер-Айленд, Австралія",
+    "description": "Ізольований острів із темним небом, чудовий для спостереження південного неба.",
+    "latitude": -25.2396,
+    "longitude": 153.1325,
+    "photoUrl": "/img/locations/fraser_island.jpg"
+  },
+  {
+    "id": 14,
+    "name": "Джошуа-Трі, США",
+    "description": "Національний парк у Каліфорнії, популярний серед астрофотографів і кемперів.",
+    "latitude": 33.8734,
+    "longitude": -115.9010,
+    "photoUrl": "/img/locations/joshua_tree.jpg"
+  },
+  {
+    "id": 15,
+    "name": "Пустеля Ваді-Рам, Йорданія",
+    "description": "Пейзажі з «Марсу» та кришталеве зоряне небо — одне з найкращих місць Близького Сходу.",
+    "latitude": 29.5766,
+    "longitude": 35.4194,
+    "photoUrl": "/img/locations/wadi_rum.jpg"
+  },
+  {
+    "id": 16,
+    "name": "Національний парк Тейде, Іспанія",
+    "description": "Обсерваторія Тейде на Тенерифе — одна з найважливіших у Європі.",
+    "latitude": 28.2724,
+    "longitude": -16.6420,
+    "photoUrl": "/img/locations/teide.jpg"
+  },
+  {
+    "id": 17,
+    "name": "Острів Хвар, Хорватія",
+    "description": "Середземноморський клімат та темне небо — місце проведення астрономічних фестивалів.",
+    "latitude": 43.1725,
+    "longitude": 16.4411,
+    "photoUrl": "/img/locations/hvar.jpg"
+  },
+  {
+    "id": 18,
+    "name": "Верхній Мичіган, США",
+    "description": "Північні озера з темним небом, де часто видно полярне сяйво.",
+    "latitude": 46.2500,
+    "longitude": -87.6167,
+    "photoUrl": "/img/locations/upper_michigan.jpg"
+  },
+  {
+    "id": 19,
+    "name": "Національний парк Джаспер, Канада",
+    "description": "Міжнародний заповідник темного неба з фестивалем зоряного неба кожного року.",
+    "latitude": 52.8737,
+    "longitude": -117.9543,
+    "photoUrl": "/img/locations/jasper.jpg"
+  },
+  {
+    "id": 20,
+    "name": "Пуерто-Пірамідес, Аргентина",
+    "description": "Патагонія, без світлового шуму, чудова видимість південного зоряного неба.",
+    "latitude": -42.5833,
+    "longitude": -64.2833,
+    "photoUrl": "/img/locations/puerto_piramides.jpg"
+  },
+
+    {
+      "id": 21,
+      "name": "Гімалаї, Непал",
+      "description": "Високогірні плато з ідеальними умовами для спостереження зірок над хмарами.",
+      "latitude": 28.3949,
+      "longitude": 84.1240,
+      "photoUrl": "/img/locations/himalayas.jpg"
+    },
+    {
+      "id": 22,
+      "name": "Острів Сао-Томе, Африка",
+      "description": "Тропічна острівна держава з темним небом посеред Атлантики.",
+      "latitude": 0.1864,
+      "longitude": 6.6131,
+      "photoUrl": "/img/locations/sao_tome.jpg"
+    },
+    {
+      "id": 23,
+      "name": "Гобі, Монголія",
+      "description": "Величезна пустеля з нічним небом без хмар і міст.",
+      "latitude": 42.7952,
+      "longitude": 105.0324,
+      "photoUrl": "/img/locations/gobi.jpg"
+    },
+    {
+      "id": 24,
+      "name": "Острів Ісландія",
+      "description": "Один із найкращих регіонів для полювання на північне сяйво.",
+      "latitude": 64.9631,
+      "longitude": -19.0208,
+      "photoUrl": "/img/locations/iceland.jpg"
+    },
+    {
+      "id": 25,
+      "name": "Ла-Пальма, Іспанія",
+      "description": "Острів із науковим заповідником темного неба та великими обсерваторіями.",
+      "latitude": 28.6800,
+      "longitude": -17.7700,
+      "photoUrl": "/img/locations/la_palma.jpg"
+    },
+    {
+      "id": 26,
+      "name": "Салар-де-Уюні, Болівія",
+      "description": "Найбільше соляне озеро світу, що створює ефект дзеркала вночі.",
+      "latitude": -20.1338,
+      "longitude": -67.4891,
+      "photoUrl": "/img/locations/uyuni.jpg"
+    },
+    {
+      "id": 27,
+      "name": "Південна Джорджія",
+      "description": "Віддалений острів у Південній Атлантиці з абсолютною темрявою ночами.",
+      "latitude": -54.2700,
+      "longitude": -36.4925,
+      "photoUrl": "/img/locations/south_georgia.jpg"
+    },
+    {
+      "id": 28,
+      "name": "Скелі Мохер, Ірландія",
+      "description": "Океанські скелі без штучного світла — ідеальне місце для зоряної романтики.",
+      "latitude": 52.9715,
+      "longitude": -9.4309,
+      "photoUrl": "/img/locations/cliffs_of_moher.jpg"
+    },
+    {
+      "id": 29,
+      "name": "Антарктида (Станція Амундсен-Скотт)",
+      "description": "Абсолютна темрява і повна відсутність міського світла.",
+      "latitude": -90.0000,
+      "longitude": 0.0000,
+      "photoUrl": "/img/locations/antarctica.jpg"
+    },
+    {
+      "id": 30,
+      "name": "Гранд-Каньйон, США",
+      "description": "Один із найвідоміших національних парків США з темним нічним небом.",
+      "latitude": 36.1069,
+      "longitude": -112.1129,
+      "photoUrl": "/img/locations/grand_canyon.jpg"
+    },
+    {
+      "id": 31,
+      "name": "Тасманія, Австралія",
+      "description": "Острів зі збереженою дикою природою й міжнародним статусом темного неба.",
+      "latitude": -41.4545,
+      "longitude": 145.9707,
+      "photoUrl": "/img/locations/tasmania.jpg"
+    },
+    {
+      "id": 32,
+      "name": "Пустеля Сахара, Алжир",
+      "description": "Безкраї піщані рівнини, що створюють ідеальні умови для спостережень.",
+      "latitude": 27.0000,
+      "longitude": 3.0000,
+      "photoUrl": "/img/locations/sahara.jpg"
+    },
+    {
+      "id": 33,
+      "name": "Топ-Астро, Португалія",
+      "description": "Астрономічний кемпінг у горах Алентежу з телескопами для туристів.",
+      "latitude": 38.0000,
+      "longitude": -7.7000,
+      "photoUrl": "/img/locations/top_astro.jpg"
+    },
+    {
+      "id": 34,
+      "name": "Мадейра, Португалія",
+      "description": "Вулканічний острів у Атлантиці з мінімальним світловим забрудненням.",
+      "latitude": 32.7607,
+      "longitude": -16.9595,
+      "photoUrl": "/img/locations/madeira.jpg"
+    },
+    {
+      "id": 35,
+      "name": "Високі Татри, Словаччина",
+      "description": "Гірський масив з популярними астротурами та національним парком.",
+      "latitude": 49.1792,
+      "longitude": 20.1496,
+      "photoUrl": "/img/locations/high_tatras.jpg"
+    },
+    {
+      "id": 36,
+      "name": "Тувалу, Океанія",
+      "description": "Маленька держава у Тихому океані — одна з найтемніших на планеті.",
+      "latitude": -7.1095,
+      "longitude": 177.6493,
+      "photoUrl": "/img/locations/tuvalu.jpg"
+    },
+    {
+      "id": 37,
+      "name": "Скіфія, Україна",
+      "description": "Степи Херсонщини — плоский горизонт і нічне небо без світлових перешкод.",
+      "latitude": 46.7545,
+      "longitude": 33.3520,
+      "photoUrl": "/img/locations/skifiya.jpg"
+    },
+    {
+      "id": 38,
+      "name": "Фінмаркен, Норвегія",
+      "description": "Північне сяйво, снігові пейзажі та полярна ніч — улюблене місце астрофотографів.",
+      "latitude": 70.0000,
+      "longitude": 25.0000,
+      "photoUrl": "/img/locations/finnmark.jpg"
+    },
+    {
+      "id": 39,
+      "name": "Земля Франца-Йосифа, Росія (Арктика)",
+      "description": "Найпівнічніші території, де панує полярна ніч.",
+      "latitude": 80.0000,
+      "longitude": 60.0000,
+      "photoUrl": "/img/locations/franz_josef_land.jpg"
+    },
+    {
+      "id": 40,
+      "name": "Чако, Аргентина",
+      "description": "Провінція з великими територіями без міст — чудовий південний горизонт.",
+      "latitude": -27.4500,
+      "longitude": -58.9867,
+      "photoUrl": "/img/locations/chaco.jpg"
+    },
+    {
+      "id": 41,
+      "name": "Селестун, Мексика",
+      "description": "Заповідна зона біля Юкатану з низьким світловим забрудненням та видом на Галактичний центр.",
+      "latitude": 20.8661,
+      "longitude": -90.3986,
+      "photoUrl": "/img/locations/celestun.jpg"
+    },
+    {
+      "id": 42,
+      "name": "Плато Барант, Іран",
+      "description": "Одне з найпопулярніших місць для астрономів в Азії.",
+      "latitude": 36.2968,
+      "longitude": 59.6067,
+      "photoUrl": "/img/locations/barant.jpg"
+    },
+    {
+      "id": 43,
+      "name": "Місячна долина, Аргентина",
+      "description": "Унікальний геопарк з марсіанськими пейзажами та чистим небом.",
+      "latitude": -30.1983,
+      "longitude": -67.0014,
+      "photoUrl": "/img/locations/valle_luna.jpg"
+    },
+    {
+      "id": 44,
+      "name": "Національний парк Снейфелльсйокутль, Ісландія",
+      "description": "Містичне місце Жюля Верна, що пропонує виняткові умови для нічного спостереження.",
+      "latitude": 64.8000,
+      "longitude": -23.7833,
+      "photoUrl": "/img/locations/snaefellsjokull.jpg"
+    },
+    {
+      "id": 45,
+      "name": "Чотири Кути, США",
+      "description": "Місце перетину чотирьох штатів із безкрайнім небом над пустелею.",
+      "latitude": 36.9980,
+      "longitude": -109.0452,
+      "photoUrl": "/img/locations/four_corners.jpg"
+    },
+    {
+      "id": 46,
+      "name": "Калафат, Аргентина",
+      "description": "На півдні Патагонії, чудово видно Магелланові Хмари.",
+      "latitude": -50.3370,
+      "longitude": -72.2648,
+      "photoUrl": "/img/locations/el_calafate.jpg"
+    },
+    {
+      "id": 47,
+      "name": "Чінчоро, Болівія",
+      "description": "Селище біля озера Тітікака, вільне від світлового шуму.",
+      "latitude": -16.2131,
+      "longitude": -68.6238,
+      "photoUrl": "/img/locations/chinchoro.jpg"
+    },
+    {
+      "id": 48,
+      "name": "Острів Ругія, Німеччина",
+      "description": "Найпівнічніша частина Німеччини з доступом до темного Балтійського неба.",
+      "latitude": 54.4333,
+      "longitude": 13.3833,
+      "photoUrl": "/img/locations/rugen.jpg"
+    },
+    {
+      "id": 49,
+      "name": "Острів Мен, Велика Британія",
+      "description": "Перший офіційний острівний заповідник темного неба в Європі.",
+      "latitude": 54.2361,
+      "longitude": -4.5481,
+      "photoUrl": "/img/locations/isle_of_man.jpg"
+    },
+    {
+      "id": 50,
+      "name": "Оазис Бахарія, Єгипет",
+      "description": "Оазис у Західній пустелі з бездоганною видимістю нічного неба.",
+      "latitude": 28.3500,
+      "longitude": 28.8667,
+      "photoUrl": "/img/locations/bahariya.jpg"
+    },
+    {
+      "id": 51,
+      "name": "Гірське пасмо Апалачі, США",
+      "description": "Регіон Блакитних гір з темними гірськими ночами.",
+      "latitude": 36.1350,
+      "longitude": -81.6776,
+      "photoUrl": "/img/locations/appalachians.jpg"
+    },
+    {
+      "id": 52,
+      "name": "Пустеля Такла-Макан, Китай",
+      "description": "Одне з найбільш ізольованих місць у світі, чудове для спостережень.",
+      "latitude": 38.4167,
+      "longitude": 83.6167,
+      "photoUrl": "/img/locations/taklamakan.jpg"
+    },
+    {
+      "id": 53,
+      "name": "Плато Лаго-Пуело, Аргентина",
+      "description": "Гірський масив з безкраїм горизонтом для спостережень.",
+      "latitude": -42.1333,
+      "longitude": -71.6333,
+      "photoUrl": "/img/locations/lago_puelo.jpg"
+    },
+    {
+      "id": 54,
+      "name": "Казбек, Грузія",
+      "description": "Високогір’я Кавказу — кристально чисте небо та гірські тіні.",
+      "latitude": 42.6953,
+      "longitude": 44.5000,
+      "photoUrl": "/img/locations/kazbek.jpg"
+    },
+    {
+      "id": 55,
+      "name": "Салар де Арізаро, Аргентина",
+      "description": "Один з найбільших соляних басейнів світу.",
+      "latitude": -25.1200,
+      "longitude": -67.5500,
+      "photoUrl": "/img/locations/arizaro.jpg"
+    },
+    {
+      "id": 56,
+      "name": "Північна Лапландія, Фінляндія",
+      "description": "Мала щільність населення, часті полярні сяйва та полярна ніч.",
+      "latitude": 68.5000,
+      "longitude": 27.0000,
+      "photoUrl": "/img/locations/lapland.jpg"
+    },
+    {
+      "id": 57,
+      "name": "Панама-Рок, Колорадо, США",
+      "description": "Пустельна зона з надзвичайною прозорістю повітря.",
+      "latitude": 37.0000,
+      "longitude": -105.0000,
+      "photoUrl": "/img/locations/panama_rock.jpg"
+    },
+    {
+      "id": 58,
+      "name": "Табір «Альфа», ОАЕ",
+      "description": "Пустельний астрономічний центр поблизу Дубая.",
+      "latitude": 24.7743,
+      "longitude": 55.9620,
+      "photoUrl": "/img/locations/alpha_camp.jpg"
+    },
+    {
+      "id": 59,
+      "name": "Національний парк Каракал, Узбекистан",
+      "description": "Заповідна територія із темним небом у степах.",
+      "latitude": 43.8667,
+      "longitude": 59.5500,
+      "photoUrl": "/img/locations/karakal.jpg"
+    },
+    {
+      "id": 60,
+      "name": "Острів Святого Павла, Франція (Заморський)",
+      "description": "Малонаселений острів в Індійському океані — небо видно на 360°.",
+      "latitude": -38.7167,
+      "longitude": 77.5167,
+      "photoUrl": "/img/locations/st_paul.jpg"
+    }
+  ]
+
+
