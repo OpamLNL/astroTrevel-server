@@ -9,7 +9,7 @@ const morgan = require("morgan");
 const { closePool } = require("./config/database");
 
 // Middleware для обробки CORS change 2
-const allowedOrigins = ['https://epic-saga.vercel.app', 'https://epic-saga-git-master-epicsagas-projects.vercel.app', 'https://epic-saga-epicsagas-projects.vercel.app'];
+const allowedOrigins = ['http://localhost:5173'];
 
 app.use((req, res, next) => {
     const origin = req.headers.origin;

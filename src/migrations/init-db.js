@@ -94,7 +94,7 @@ async function init() {
         await dropTables();
         await createTables();
         await loadData('locations', 'locations.json');
-        await loadData('tours');
+        await loadData('tours', 'tours.json');
         await loadData('posts', 'posts.json');
         await loadData('tags', 'tags.json');
         await loadData('location_tags', 'location_tags.json');

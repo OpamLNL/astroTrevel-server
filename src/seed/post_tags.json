@@ -9,11 +9,11 @@
   },
   {
     "post_id": 1,
-    "tag_id": 44
+    "tag_id": 14
   },
   {
     "post_id": 2,
-    "tag_id": 39
+    "tag_id": 4
   },
   {
     "post_id": 2,
@@ -29,7 +29,7 @@
   },
   {
     "post_id": 5,
-    "tag_id": 42
+    "tag_id": 16
   },
   {
     "post_id": 6,
@@ -37,7 +37,7 @@
   },
   {
     "post_id": 7,
-    "tag_id": 39
+    "tag_id": 4
   },
   {
     "post_id": 8,
@@ -48,12 +48,8 @@
     "tag_id": 43
   },
   {
-    "post_id": 9,
-    "tag_id": 46
-  },
-  {
     "post_id": 10,
-    "tag_id": 44
+    "tag_id": 14
   },
   {
     "post_id": 10,
