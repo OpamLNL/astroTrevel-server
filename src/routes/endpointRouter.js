@@ -46,6 +46,9 @@ router.put('/api/tours/:id', toursController.updateTour);
 router.delete('/api/tours/:id', toursController.deleteTour);
 router.get('/api/tours/:id/tags', toursController.getTagsByTour);
 
+router.get('/api/tours/:id/locations', toursController.getLocationsByTour);
+
+
 // ПОСТИ
 router.get('/api/posts', postsController.getAllPosts);
 router.get('/api/posts/:id', postsController.getPostById);

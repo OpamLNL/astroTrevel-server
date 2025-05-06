@@ -1,254 +1,318 @@
 [
   {
-    "tour_id": 8,
+    "tour_id": 20,
+    "tag_id": 1
+  },
+  {
+    "tour_id": 20,
+    "tag_id": 7
+  },
+  {
+    "tour_id": 20,
+    "tag_id": 32
+  },
+  {
+    "tour_id": 20,
+    "tag_id": 18
+  },
+  {
+    "tour_id": 20,
+    "tag_id": 19
+  },
+  {
+    "tour_id": 21,
     "tag_id": 6
   },
   {
-    "tour_id": 8,
-    "tag_id": 34
+    "tour_id": 21,
+    "tag_id": 15
   },
   {
-    "tour_id": 16,
+    "tour_id": 21,
+    "tag_id": 19
+  },
+  {
+    "tour_id": 22,
+    "tag_id": 2
+  },
+  {
+    "tour_id": 22,
+    "tag_id": 7
+  },
+  {
+    "tour_id": 22,
+    "tag_id": 33
+  },
+  {
+    "tour_id": 22,
+    "tag_id": 14
+  },
+  {
+    "tour_id": 22,
+    "tag_id": 20
+  },
+  {
+    "tour_id": 23,
+    "tag_id": 2
+  },
+  {
+    "tour_id": 23,
+    "tag_id": 7
+  },
+  {
+    "tour_id": 23,
+    "tag_id": 17
+  },
+  {
+    "tour_id": 23,
+    "tag_id": 20
+  },
+  {
+    "tour_id": 24,
+    "tag_id": 4
+  },
+  {
+    "tour_id": 24,
+    "tag_id": 3
+  },
+  {
+    "tour_id": 24,
+    "tag_id": 19
+  },
+  {
+    "tour_id": 24,
+    "tag_id": 30
+  },
+  {
+    "tour_id": 25,
+    "tag_id": 8
+  },
+  {
+    "tour_id": 25,
+    "tag_id": 25
+  },
+  {
+    "tour_id": 25,
+    "tag_id": 35
+  },
+  {
+    "tour_id": 25,
+    "tag_id": 19
+  },
+  {
+    "tour_id": 26,
+    "tag_id": 2
+  },
+  {
+    "tour_id": 26,
     "tag_id": 6
   },
   {
-    "tour_id": 16,
+    "tour_id": 26,
+    "tag_id": 20
+  },
+  {
+    "tour_id": 27,
+    "tag_id": 3
+  },
+  {
+    "tour_id": 27,
+    "tag_id": 7
+  },
+  {
+    "tour_id": 27,
+    "tag_id": 15
+  },
+  {
+    "tour_id": 27,
+    "tag_id": 20
+  },
+  {
+    "tour_id": 28,
+    "tag_id": 2
+  },
+  {
+    "tour_id": 28,
+    "tag_id": 7
+  },
+  {
+    "tour_id": 28,
+    "tag_id": 29
+  },
+  {
+    "tour_id": 28,
+    "tag_id": 19
+  },
+  {
+    "tour_id": 29,
+    "tag_id": 2
+  },
+  {
+    "tour_id": 29,
     "tag_id": 34
   },
   {
-    "tour_id": 19,
+    "tour_id": 29,
+    "tag_id": 19
+  },
+  {
+    "tour_id": 30,
+    "tag_id": 3
+  },
+  {
+    "tour_id": 30,
+    "tag_id": 7
+  },
+  {
+    "tour_id": 30,
+    "tag_id": 32
+  },
+  {
+    "tour_id": 30,
+    "tag_id": 8
+  },
+  {
+    "tour_id": 30,
+    "tag_id": 19
+  },
+  {
+    "tour_id": 31,
+    "tag_id": 4
+  },
+  {
+    "tour_id": 31,
+    "tag_id": 25
+  },
+  {
+    "tour_id": 31,
+    "tag_id": 19
+  },
+  {
+    "tour_id": 31,
+    "tag_id": 30
+  },
+  {
+    "tour_id": 32,
+    "tag_id": 1
+  },
+  {
+    "tour_id": 32,
+    "tag_id": 7
+  },
+  {
+    "tour_id": 32,
+    "tag_id": 33
+  },
+  {
+    "tour_id": 32,
+    "tag_id": 19
+  },
+  {
+    "tour_id": 33,
     "tag_id": 6
   },
   {
-    "tour_id": 19,
-    "tag_id": 34
+    "tour_id": 33,
+    "tag_id": 26
+  },
+  {
+    "tour_id": 33,
+    "tag_id": 20
   },
   {
     "tour_id": 34,
-    "tag_id": 6
+    "tag_id": 3
   },
   {
     "tour_id": 34,
-    "tag_id": 34
+    "tag_id": 7
   },
   {
-    "tour_id": 51,
+    "tour_id": 34,
+    "tag_id": 5
+  },
+  {
+    "tour_id": 34,
+    "tag_id": 20
+  },
+  {
+    "tour_id": 35,
     "tag_id": 6
   },
   {
-    "tour_id": 51,
-    "tag_id": 34
+    "tour_id": 35,
+    "tag_id": 12
   },
   {
-    "tour_id": 55,
-    "tag_id": 6
+    "tour_id": 35,
+    "tag_id": 19
   },
   {
-    "tour_id": 55,
-    "tag_id": 34
+    "tour_id": 36,
+    "tag_id": 2
   },
   {
-    "tour_id": 68,
-    "tag_id": 6
+    "tour_id": 36,
+    "tag_id": 7
   },
   {
-    "tour_id": 68,
-    "tag_id": 34
-  },
-  {
-    "tour_id": 69,
-    "tag_id": 6
-  },
-  {
-    "tour_id": 69,
-    "tag_id": 34
-  },
-  {
-    "tour_id": 77,
-    "tag_id": 6
-  },
-  {
-    "tour_id": 77,
-    "tag_id": 34
-  },
-  {
-    "tour_id": 81,
-    "tag_id": 6
-  },
-  {
-    "tour_id": 81,
-    "tag_id": 34
-  },
-  {
-    "tour_id": 85,
-    "tag_id": 6
-  },
-  {
-    "tour_id": 85,
-    "tag_id": 34
-  },
-  {
-    "tour_id": 88,
-    "tag_id": 6
-  },
-  {
-    "tour_id": 88,
-    "tag_id": 34
-  },
-  {
-    "tour_id": 1001,
+    "tour_id": 36,
     "tag_id": 32
   },
   {
-    "tour_id": 1001,
-    "tag_id": 31
+    "tour_id": 36,
+    "tag_id": 19
   },
   {
-    "tour_id": 1001,
-    "tag_id": 31
+    "tour_id": 37,
+    "tag_id": 4
   },
   {
-    "tour_id": 1002,
-    "tag_id": 32
+    "tour_id": 37,
+    "tag_id": 11
   },
   {
-    "tour_id": 1002,
-    "tag_id": 31
+    "tour_id": 37,
+    "tag_id": 19
   },
   {
-    "tour_id": 1002,
-    "tag_id": 31
+    "tour_id": 37,
+    "tag_id": 30
   },
   {
-    "tour_id": 1003,
-    "tag_id": 32
+    "tour_id": 38,
+    "tag_id": 3
   },
   {
-    "tour_id": 1003,
-    "tag_id": 31
+    "tour_id": 38,
+    "tag_id": 7
   },
   {
-    "tour_id": 1003,
-    "tag_id": 31
-  },
-  {
-    "tour_id": 1004,
-    "tag_id": 6
-  },
-  {
-    "tour_id": 1004,
-    "tag_id": 34
-  },
-  {
-    "tour_id": 1004,
-    "tag_id": 31
-  },
-  {
-    "tour_id": 1005,
-    "tag_id": 6
-  },
-  {
-    "tour_id": 1005,
-    "tag_id": 34
-  },
-  {
-    "tour_id": 1005,
-    "tag_id": 31
-  },
-  {
-    "tour_id": 1006,
-    "tag_id": 6
-  },
-  {
-    "tour_id": 1006,
-    "tag_id": 34
-  },
-  {
-    "tour_id": 1006,
-    "tag_id": 31
-  },
-  {
-    "tour_id": 1007,
-    "tag_id": 35
-  },
-  {
-    "tour_id": 1007,
-    "tag_id": 31
-  },
-  {
-    "tour_id": 1008,
-    "tag_id": 35
-  },
-  {
-    "tour_id": 1008,
-    "tag_id": 31
-  },
-  {
-    "tour_id": 1009,
-    "tag_id": 35
-  },
-  {
-    "tour_id": 1009,
-    "tag_id": 31
-  },
-  {
-    "tour_id": 1010,
+    "tour_id": 38,
     "tag_id": 33
   },
   {
-    "tour_id": 1010,
-    "tag_id": 31
+    "tour_id": 38,
+    "tag_id": 12
   },
   {
-    "tour_id": 1010,
-    "tag_id": 31
+    "tour_id": 38,
+    "tag_id": 20
   },
   {
-    "tour_id": 1011,
-    "tag_id": 33
+    "tour_id": 39,
+    "tag_id": 3
   },
   {
-    "tour_id": 1011,
-    "tag_id": 31
+    "tour_id": 39,
+    "tag_id": 7
   },
   {
-    "tour_id": 1011,
-    "tag_id": 31
+    "tour_id": 39,
+    "tag_id": 24
   },
   {
-    "tour_id": 1012,
-    "tag_id": 33
-  },
-  {
-    "tour_id": 1012,
-    "tag_id": 31
-  },
-  {
-    "tour_id": 1012,
-    "tag_id": 31
-  },
-  {
-    "tour_id": 1013,
-    "tag_id": 36
-  },
-  {
-    "tour_id": 1013,
-    "tag_id": 31
-  },
-  {
-    "tour_id": 1014,
-    "tag_id": 36
-  },
-  {
-    "tour_id": 1014,
-    "tag_id": 31
-  },
-  {
-    "tour_id": 1015,
-    "tag_id": 36
-  },
-  {
-    "tour_id": 1015,
-    "tag_id": 31
+    "tour_id": 39,
+    "tag_id": 19
   }
 ]

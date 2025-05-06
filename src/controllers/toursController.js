@@ -3,11 +3,27 @@ const { query } = require('../config/database');
 exports.getAllTours = async (req, res) => {
     try {
         const tours = await query('SELECT * FROM tours');
-        res.json(tours);
+
+        const toursWithTags = await Promise.all(
+            tours.map(async (tour) => {
+                const tags = await query(
+                    `SELECT tags.id, tags.name 
+                     FROM tags 
+                     JOIN tour_tags ON tags.id = tour_tags.tag_id 
+                     WHERE tour_tags.tour_id = ?`,
+                    [tour.id]
+                );
+                return { ...tour, tags };
+            })
+        );
+
+        res.json(toursWithTags);
     } catch (err) {
+        console.error('❌ Помилка при отриманні турів:', err);
         res.status(500).json({ error: 'Помилка при отриманні турів' });
     }
 };
+
 
 exports.getUpcomingTours = async (req, res) => {
     try {
@@ -73,5 +89,21 @@ exports.getTagsByTour = async (req, res) => {
         res.json(tags);
     } catch (err) {
         res.status(500).json({ error: 'Помилка при отриманні тегів туру' });
+    }
+};
+
+
+exports.getLocationsByTour = async (req, res) => {
+    const tourId = req.params.id;
+    try {
+        const result = await query(
+            `SELECT l.* FROM locations l
+             JOIN tour_locations tl ON l.id = tl.location_id
+             WHERE tl.tour_id = ?`, [tourId]
+        );
+        res.json(result);
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ error: 'Failed to fetch locations for this tour.' });
     }
 };
