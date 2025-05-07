@@ -8,6 +8,9 @@ const locationsController = require('../controllers/locationsController');
 const toursController = require('../controllers/toursController');
 const postsController = require('../controllers/postsController');
 const tagsController = require('../controllers/tagsController');
+const photosController = require('../controllers/photosController');
+
+
 
 const { authenticateToken } = require("../services/authService");
 
@@ -70,5 +73,11 @@ router.get('/api/tags/:id/posts', tagsController.getPostsByTag);
 // Пошук і фільтрація
 router.get('/api/search', postsController.searchContent);
 router.get('/api/filters', tagsController.filterByTag);
+
+
+
+//Фото з NASA
+router.get('/api/photos/:type', photosController.getPhotosByType);
+
 
 module.exports = router;
