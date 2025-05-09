@@ -1,0 +1,107 @@
+[
+  {
+    "name": "Celestron NexStar 6SE",
+    "type": "Телескоп",
+    "description": "Катадіоптричний телескоп з комп'ютеризованим наведенням і 150 мм апертурою.",
+    "thumbUrl": "/images/equipment/celestron_nexstar_6se.jpg",
+    "originalUrl": "https://astromagazin.net/uploads/products/img/nx6se_large.jpg"
+  },
+  {
+    "name": "Sky-Watcher Dob 10",
+    "type": "Телескоп",
+    "description": "Ньютонівський телескоп на добсонівській монтировці з апертурою 254 мм.",
+    "thumbUrl": "/images/equipment/skywatcher_dob_10.jpg",
+    "originalUrl": "https://astromagazin.net/uploads/products/img/file1464171059.jpg"
+  },
+  {
+    "name": "ZWO ASI120MM Mini",
+    "type": "Астрокамера",
+    "description": "Монохромна гід-камера для астрофотографії та автонаведення.",
+    "thumbUrl": "/images/equipment/zwo_asi120mm_mini.jpg",
+    "originalUrl": "https://astromagazin.net/uploads/products/img/file1591000671.jpg"
+  },
+  {
+    "name": "ZWO ASI2600MC Pro",
+    "type": "Астрокамера",
+    "description": "Кольорова охолоджувана камера з великою матрицею APS-C формату.",
+    "thumbUrl": "/images/equipment/zwo_asi2600mc_pro.jpg",
+    "originalUrl": "https://www.firstlightoptics.com/user/products/large/zwo_asi2600mc_pro_1.jpg"
+  },
+  {
+    "name": "Sky-Watcher EQ6-R Pro",
+    "type": "Монтировка",
+    "description": "Екваторіальна монтировка для важкого навантаження з автогідом і Wi-Fi.",
+    "thumbUrl": "/images/equipment/skywatcher_eq6r_pro.jpg",
+    "originalUrl": "https://www.skywatcherusa.com/cdn/shop/products/01_EQ6-R_Main_1350x.jpg?v=1603841549"
+  },
+  {
+    "name": "Baader UHC-S Filter",
+    "type": "Фільтр",
+    "description": "Світлозахисний фільтр для покращення видимості туманностей.",
+    "thumbUrl": "/images/equipment/baader_uhc_s_filter.jpg",
+    "originalUrl": "https://oz.com.ua/images/products/big/filtr-dlia-teleskopa-baader-planetarium-uhc-s-1.25.jpg"
+  },
+  {
+    "name": "Baader H-alpha 7nm",
+    "type": "Фільтр",
+    "description": "Вузькосмуговий фільтр для H-alpha астрофотографії.",
+    "thumbUrl": "/images/equipment/baader_h_alpha_7nm.jpg",
+    "originalUrl": "https://www.baader-planetarium.co.uk/wp-content/uploads/2019/07/baader-h-alpha-7nm-ccd-narrowband-filter_983c3fe1-697a-4e51-92ee-5998bb4c7ef1.jpg"
+  },
+  {
+    "name": "ZWO EAF Focuser",
+    "type": "Фокусер",
+    "description": "Автофокусер ZWO EAF з підтримкою ASCOM і ручного управління.",
+    "thumbUrl": "/images/equipment/zwo_eaf_focuser.jpg",
+    "originalUrl": "https://i.zwoastro.com/wp-content/uploads/2022/07/86a633ac6668fc3caf2cc194bd004027.jpg"
+  },
+  {
+    "name": "Celestron StarSense AutoAlign",
+    "type": "Аксесуар",
+    "description": "Автоматичне вирівнювання телескопа без використання GPS.",
+    "thumbUrl": "/images/equipment/celestron_starsense_autoalign.jpg",
+    "originalUrl": "https://astrobackyard.com/wp-content/uploads/2020/04/celestron-starsense-autoalign.jpg"
+  },
+  {
+    "name": "Explore Scientific ED102",
+    "type": "Телескоп",
+    "description": "Апохроматичний рефрактор для глибокого неба та астрофотографії.",
+    "thumbUrl": "/images/equipment/explore_scientific_ed102.jpg",
+    "originalUrl": "https://www.explorescientific.com/cdn/shop/products/FCD100_102ED_CF_2_burst_987c974b-ddb0-4b3e-a949-6b93b6bb8a32.jpg?v=1670603755"
+  },
+  {
+    "name": "William Optics RedCat 51",
+    "type": "Об'єктив",
+    "description": "Астрооб'єктив 250 мм f/4.9, ідеальний для мобільної зйомки неба.",
+    "thumbUrl": "/images/equipment/william_optics_redcat_51.jpg",
+    "originalUrl": "https://williamoptics.com/cdn/shop/files/Redcat-51-perspective-1.jpg?v=1708412637&width=2400"
+  },
+  {
+    "name": "ZWO ASI AIR Plus",
+    "type": "Комп'ютер керування",
+    "description": "Wi-Fi пристрій для керування всім астрокомплексом.",
+    "thumbUrl": "/images/equipment/zwo_asi_air_plus.jpg",
+    "originalUrl": "https://cdn.shopify.com/s/files/1/1594/4815/files/1000-Plus_14_1024x1024.jpg?v=1651101921"
+  },
+  {
+    "name": "Sky-Watcher Star Adventurer 2i",
+    "type": "Монтировка",
+    "description": "Легка портативна монтировка з автотрекінгом.",
+    "thumbUrl": "/images/equipment/skywatcher_star_adventurer_2i.jpg",
+    "originalUrl": "https://philhart.com/wp-content/uploads/2020/11/200mm-on-EQ-head-540x540-1.jpg"
+  },
+  {
+    "name": "Optolong L-eXtreme Filter",
+    "type": "Фільтр",
+    "description": "Вузькосмуговий фільтр для туманностей у міських умовах.",
+    "thumbUrl": "/images/equipment/optolong_lextreme_filter.jpg",
+    "originalUrl": "https://i.ytimg.com/vi/kv8y_ioVBFM/maxresdefault.jpg"
+  },
+  {
+    "name": "Celestron PowerTank Lithium Pro",
+    "type": "Живлення",
+    "description": "Потужна портативна батарея для телескопів і аксесуарів.",
+    "thumbUrl": "/images/equipment/celestron_powertank_lithium_pro.jpg",
+    "originalUrl": "https://www.google.com/imgres?q=celestron%20powertank%20lithium%20pro.jpg&imgurl=https%3A%2F%2Foz.com.ua%2Fimages%2Fproducts%2Fbig%2Fblok-zhyvlennia-celestron-powertank-lithium-pro.jpg&imgrefurl=https%3A%2F%2Foz.com.ua%2Fpr-blok-zhyvlennia-celestron-powertank-lithium-pro.html&docid=qEc_GFyGADrK4M&tbnid=haYG4aqMJAkMwM&vet=12ahUKEwi3sJm15JWNAxUHSPEDHXtJBMoQM3oECBIQAA..i&w=1000&h=1000&hcb=2&itg=1&ved=2ahUKEwi3sJm15JWNAxUHSPEDHXtJBMoQM3oECBIQAA"
+  }
+]

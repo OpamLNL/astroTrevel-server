@@ -3,6 +3,7 @@ const router = express.Router();
 
 const usersController = require('../controllers/usersController');
 const authController = require("../controllers/authController");
+const equipmentController = require("../controllers/equipmentController");
 
 const locationsController = require('../controllers/locationsController');
 const toursController = require('../controllers/toursController');
@@ -79,5 +80,8 @@ router.get('/api/filters', tagsController.filterByTag);
 //Фото з NASA
 router.get('/api/photos/:type', photosController.getPhotosByType);
 
+
+//Обладнання
+router.get('/api/equipment', equipmentController.getEquipment);
 
 module.exports = router;
