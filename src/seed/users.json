@@ -1,0 +1,14 @@
+[
+  {
+    "firebase_uid": "test-firebase-uid-1",
+    "email": "admin@example.com",
+    "name": "Admin User",
+    "avatar_url": "https://example.com/avatar1.png"
+  },
+  {
+    "firebase_uid": "test-firebase-uid-2",
+    "email": "mod@example.com",
+    "name": "Moderator User",
+    "avatar_url": "https://example.com/avatar2.png"
+  }
+]

@@ -11,6 +11,7 @@ npm-debug.log
 # Editor directories and files
 .idea/
 .vscode/
+
 *.suo
 *.ntvs*
 *.njsproj
@@ -21,7 +22,6 @@ npm-debug.log
 .env
 .poolConfig
 
-
 # Log files
 logs/
 *.log
@@ -31,3 +31,4 @@ logs/
 Thumbs.db
 
 # Custom files or directories to ignore
+/secrets/astrotravel-auth-firebase-adminsdk-fbsvc-a4afaa77e2.json

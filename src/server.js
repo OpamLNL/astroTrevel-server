@@ -7,6 +7,8 @@ const path = require('path');
 const morgan = require('morgan');
 
 const handleRequest = require('./routes/endpointRouter');
+const authRoutes = require('./routes/auth');
+
 const { closePool } = require('./config/database');
 const { checkAndInitDatabase } = require('./migrations/db-checker');
 
@@ -39,6 +41,10 @@ app.use((req, res, next) => {
 
 // Routes
 app.use(handleRequest);
+
+
+//authRoutes
+app.use('/api/auth', authRoutes);
 
 // Start server
 const PORT = process.env.PORT;

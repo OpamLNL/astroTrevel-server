@@ -1,0 +1,6 @@
+[
+  { "user_id": 1, "tour_id": 2 },
+  { "user_id": 1, "tour_id": 3 },
+  { "user_id": 2, "tour_id": 3 },
+  { "user_id": 2, "tour_id": 4 }
+]
