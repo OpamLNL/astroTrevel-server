@@ -1,44 +1,48 @@
-// authController.js
-const bcrypt = require('bcryptjs');
-const { getUserByEmail } = require('../controllers/usersController');
-const { generateTokens } = require('../services/authService');
+const { getAuth } = require('firebase-admin/auth');
+const { query } = require('../config/database');
 
 exports.signIn = async (req, res) => {
-    const { email, password } = req.body;
-    console.log('req');
-    console.log(req.body);
-    console.log(email);
+    const { token } = req.body;
+
+    if (!token) {
+        return res.status(400).json({ error: 'Token is required.' });
+    }
 
     try {
+        // Перевірка токена Firebase
+        const decoded = await getAuth().verifyIdToken(token);
 
+        const firebase_uid = decoded.uid;
+        const email = decoded.email || null;
+        const name = decoded.name || null;
+        const avatar_url = decoded.picture || null;
 
-        const user = await getUserByEmail(email);
+        // Перевірка наявності користувача
+        const [existing] = await query('SELECT * FROM users WHERE firebase_uid = ?', [firebase_uid]);
 
+        let user;
 
-        if (!user) {
-            return res.status(401).json({ message: "Невірний email або пароль" });
+        if (existing) {
+            user = existing;
+        } else {
+            const result = await query(`
+        INSERT INTO users (firebase_uid, email, name, avatar_url)
+        VALUES (?, ?, ?, ?)
+      `, [firebase_uid, email, name, avatar_url]);
+
+            const [newUser] = await query('SELECT * FROM users WHERE id = ?', [result.insertId]);
+            user = newUser;
         }
 
-        const match = await bcrypt.compare(password, user.password);
-
-        if (!match) {
-            return res.status(401).json({ message: "Невірний email або пароль" });
-        }
-
-        const { accessToken, refreshToken } = generateTokens(user.id);
-        const userData = {
+        // Повернення користувача
+        res.json({
             id: user.id,
-            username: user.username,
             email: user.email,
-            avatar: user.avatar,
-            bio: user.bio,
-            role: user.role
-        };
-
-        console.log(`Користувач ${user.username} успішно авторизований.`);
-        res.json({ user: userData, accessToken, refreshToken });
-    } catch (error) {
-        console.error('Auth error:', error);
-        res.status(500).json({ message: "Внутрішня помилка сервера", details: error.message });
+            name: user.name,
+            avatar_url: user.avatar_url
+        });
+    } catch (err) {
+        console.error('Firebase signIn error:', err.message);
+        res.status(401).json({ error: 'Invalid token' });
     }
 };

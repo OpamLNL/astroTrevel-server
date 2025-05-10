@@ -10,8 +10,8 @@ const toursController = require('../controllers/toursController');
 const postsController = require('../controllers/postsController');
 const tagsController = require('../controllers/tagsController');
 const photosController = require('../controllers/photosController');
-
-
+const likesController = require('../controllers/likesController');
+const visitController = require('../controllers/visitController');
 
 const { authenticateToken } = require("../services/authService");
 
@@ -49,9 +49,7 @@ router.post('/api/tours', toursController.createTour);
 router.put('/api/tours/:id', toursController.updateTour);
 router.delete('/api/tours/:id', toursController.deleteTour);
 router.get('/api/tours/:id/tags', toursController.getTagsByTour);
-
 router.get('/api/tours/:id/locations', toursController.getLocationsByTour);
-
 
 // ПОСТИ
 router.get('/api/posts', postsController.getAllPosts);
@@ -75,13 +73,28 @@ router.get('/api/tags/:id/posts', tagsController.getPostsByTag);
 router.get('/api/search', postsController.searchContent);
 router.get('/api/filters', tagsController.filterByTag);
 
-
-
-//Фото з NASA
+// Фото з NASA
 router.get('/api/photos/:type', photosController.getPhotosByType);
 
-
-//Обладнання
+// Обладнання
 router.get('/api/equipment', equipmentController.getEquipment);
+
+// Лайки
+router.get('/api/likes/:userId', likesController.getUserLikes);
+router.post('/api/likes', likesController.likePost);
+router.delete('/api/likes', likesController.unlikePost);
+
+// Улюблене / Відвідаю
+router.get('/api/visit/posts/:userId', visitController.getFavoritePosts);
+router.post('/api/visit/posts', visitController.addFavoritePost);
+router.delete('/api/visit/posts', visitController.removeFavoritePost);
+
+router.get('/api/visit/locations/:userId', visitController.getPlannedLocations);
+router.post('/api/visit/locations', visitController.addPlannedLocation);
+router.delete('/api/visit/locations', visitController.removePlannedLocation);
+
+router.get('/api/visit/tours/:userId', visitController.getPlannedTours);
+router.post('/api/visit/tours', visitController.addPlannedTour);
+router.delete('/api/visit/tours', visitController.removePlannedTour);
 
 module.exports = router;
