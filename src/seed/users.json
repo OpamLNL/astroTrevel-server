@@ -1,14 +1,23 @@
 [
   {
-    "firebase_uid": "test-firebase-uid-1",
+    "id": 1,
+    "firebase_uid": "firebase-admin-uid",
     "email": "admin@example.com",
-    "name": "Admin User",
-    "avatar_url": "https://example.com/avatar1.png"
+    "name": "Адміністратор",
+    "avatar_url": "/images/users/avatar1.jpg"
   },
   {
-    "firebase_uid": "test-firebase-uid-2",
-    "email": "mod@example.com",
-    "name": "Moderator User",
-    "avatar_url": "https://example.com/avatar2.png"
+    "id": 2,
+    "firebase_uid": "firebase-user1-uid",
+    "email": "user1@example.com",
+    "name": "Іван Зоряний",
+    "avatar_url": "/images/users/avatar2.jpg"
+  },
+  {
+    "id": 3,
+    "firebase_uid": "firebase-user2-uid",
+    "email": "user2@example.com",
+    "name": "Олена Астрономічна",
+    "avatar_url": "/images/users/avatar3.jpg"
   }
 ]

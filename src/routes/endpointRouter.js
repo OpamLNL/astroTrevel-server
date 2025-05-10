@@ -59,6 +59,18 @@ router.put('/api/posts/:id', postsController.updatePost);
 router.delete('/api/posts/:id', postsController.deletePost);
 router.get('/api/posts/:id/tags', postsController.getTagsByPost);
 
+router.get('/api/posts/:id/likes/count', postsController.getLikesCount);
+router.get('/api/posts/:id/status', postsController.getUserPostStatus);
+router.post('/api/posts/:id/like', postsController.likePost);
+// router.post('/api/posts/:id/like', (req, res) => res.send('ok'));
+
+
+
+router.delete('/api/posts/:id/like', postsController.unlikePost);
+router.post('/api/posts/:id/favorite', postsController.addToFavorites);
+router.delete('/api/posts/:id/favorite', postsController.removeFromFavorites);
+
+
 // ТЕГИ
 router.get('/api/tags', tagsController.getAllTags);
 router.get('/api/tags/:id', tagsController.getTagById);
@@ -80,9 +92,9 @@ router.get('/api/photos/:type', photosController.getPhotosByType);
 router.get('/api/equipment', equipmentController.getEquipment);
 
 // Лайки
-router.get('/api/likes/:userId', likesController.getUserLikes);
-router.post('/api/likes', likesController.likePost);
-router.delete('/api/likes', likesController.unlikePost);
+
+router.get('/api/posts/:id/likes', postsController.getLikesCount);
+
 
 // Улюблене / Відвідаю
 router.get('/api/visit/posts/:userId', visitController.getFavoritePosts);

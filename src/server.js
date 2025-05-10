@@ -33,6 +33,7 @@ app.use('/images', express.static(imagesPath));
 
 // Middleware
 app.use(express.json());
+
 app.use(morgan('combined'));
 app.use((req, res, next) => {
     console.log(`${req.method} ${req.url}`);

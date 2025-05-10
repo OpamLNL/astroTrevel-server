@@ -204,6 +204,11 @@ async function init() {
         await createTourLocationRelations(toursData);
         await loadData('posts', 'posts.json');
         await loadData('tags', 'tags.json');
+
+        await loadData('roles', 'roles.json');
+        await loadData('users', 'users.json');
+        await loadData('user_roles', 'user_roles.json');
+
         await loadData('location_tags', 'location_tags.json');
         await loadData('tour_tags', 'tour_tags.json');
         await loadData('post_tags', 'post_tags.json');
@@ -213,9 +218,7 @@ async function init() {
         await loadData('visit_later_locations', 'visit_later_locations.json');
         await loadData('visit_later_tours', 'visit_later_tours.json');
 
-        await loadData('roles', 'roles.json');
-        await loadData('users', 'users.json');
-        await loadData('user_roles', 'user_roles.json');
+
 
         console.log('🚀 Database initialized successfully.');
         process.exit(0);
