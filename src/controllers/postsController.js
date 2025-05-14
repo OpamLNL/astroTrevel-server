@@ -90,7 +90,8 @@ exports.unlikePost = async (req, res) => {
 
 // --- Улюблене ---
 exports.addToFavorites = async (req, res) => {
-    const { uid } = req.body;
+    // const { uid } = req.body;
+    const { uid } = req.user.uid;
     const postId = req.params.id;
 
     const [user] = await query('SELECT id FROM users WHERE firebase_uid = ?', [uid]);

@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router();
 
+const { authenticate } = require('../middleware/authMiddleware');
+
 const usersController = require('../controllers/usersController');
 const authController = require("../controllers/authController");
 const equipmentController = require("../controllers/equipmentController");
@@ -61,14 +63,17 @@ router.get('/api/posts/:id/tags', postsController.getTagsByPost);
 
 router.get('/api/posts/:id/likes/count', postsController.getLikesCount);
 router.get('/api/posts/:id/status', postsController.getUserPostStatus);
-router.post('/api/posts/:id/like', postsController.likePost);
+
+router.post('/api/posts/:id/like', authenticate, postsController.likePost);
+// router.post('/api/posts/:id/like', postsController.likePost);
 // router.post('/api/posts/:id/like', (req, res) => res.send('ok'));
 
 
 
 router.delete('/api/posts/:id/like', postsController.unlikePost);
-router.post('/api/posts/:id/favorite', postsController.addToFavorites);
+// router.post('/api/posts/:id/favorite', postsController.addToFavorites);
 router.delete('/api/posts/:id/favorite', postsController.removeFromFavorites);
+router.post('/api/posts/:id/favorite', authenticate, postsController.addToFavorites);
 
 
 // ТЕГИ
