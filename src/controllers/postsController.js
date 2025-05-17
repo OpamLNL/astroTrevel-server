@@ -1,10 +1,13 @@
 const { query } = require('../config/database');
 
+
+
 // --- Основні операції з постами ---
 exports.getAllPosts = async (req, res) => {
     const posts = await query('SELECT * FROM posts ORDER BY created_at DESC');
     res.json(posts);
 };
+
 
 exports.getPostById = async (req, res) => {
     const [post] = await query('SELECT * FROM posts WHERE id = ?', [req.params.id]);
@@ -90,8 +93,7 @@ exports.unlikePost = async (req, res) => {
 
 // --- Улюблене ---
 exports.addToFavorites = async (req, res) => {
-    // const { uid } = req.body;
-    const { uid } = req.user.uid;
+    const uid = req.user.uid; // отримуємо uid користувача
     const postId = req.params.id;
 
     const [user] = await query('SELECT id FROM users WHERE firebase_uid = ?', [uid]);
@@ -101,8 +103,9 @@ exports.addToFavorites = async (req, res) => {
     res.json({ success: true });
 };
 
+
 exports.removeFromFavorites = async (req, res) => {
-    const { uid } = req.body;
+    const uid = req.user.uid; // ✅
     const postId = req.params.id;
 
     const [user] = await query('SELECT id FROM users WHERE firebase_uid = ?', [uid]);
@@ -112,19 +115,73 @@ exports.removeFromFavorites = async (req, res) => {
     res.json({ success: true });
 };
 
+
 // --- Статус поста для користувача (лайк, улюблене) ---
 exports.getUserPostStatus = async (req, res) => {
     const postId = req.params.id;
-    const uid = req.query.uid;
+    const uid = req.user.uid;
 
     const [user] = await query('SELECT id FROM users WHERE firebase_uid = ?', [uid]);
     if (!user) return res.json({ liked: false, favorited: false });
 
-    const [[liked]] = await query('SELECT 1 FROM likes WHERE user_id = ? AND post_id = ?', [user.id, postId]);
-    const [[fav]] = await query('SELECT 1 FROM favorites WHERE user_id = ? AND post_id = ?', [user.id, postId]);
+    const likeResult = await query('SELECT 1 FROM likes WHERE user_id = ? AND post_id = ?', [user.id, postId]);
+    const favResult = await query('SELECT 1 FROM favorites WHERE user_id = ? AND post_id = ?', [user.id, postId]);
 
     res.json({
-        liked: Boolean(liked),
-        favorited: Boolean(fav)
+        liked: likeResult.length > 0,
+        favorited: favResult.length > 0
     });
 };
+
+exports.getFavoritePostsByUser = async (req, res) => {
+    console.log("💡 getFavoritePostsByUser CALLED");
+    console.log('🔥 req.user:', req.user);
+
+    const uid = req.user.uid;
+
+
+
+    if (!uid) return res.status(401).json({ error: "Не передано токен" });
+
+    const [user] = await query('SELECT id FROM users WHERE firebase_uid = ?', [uid]);
+    if (!user) return res.status(404).json({ error: 'Користувача не знайдено' });
+
+    const posts = await query(`
+        SELECT p.* FROM posts p
+                            JOIN favorites f ON p.id = f.post_id
+        WHERE f.user_id = ?
+        ORDER BY p.created_at DESC
+    `, [user.id]);
+
+    console.log("📦 Пости:", posts.length);
+    res.json(posts);
+};
+
+
+exports.getFavoritePostsByUser = async (req, res) => {
+    console.log("💡 getFavoritePostsByUser CALLED");
+    console.log('🔥 req.user:', req.user);
+
+    const uid = req.user.uid;
+
+
+
+    if (!uid) return res.status(401).json({ error: "Не передано токен" });
+
+    const [user] = await query('SELECT id FROM users WHERE firebase_uid = ?', [uid]);
+    if (!user) return res.status(404).json({ error: 'Користувача не знайдено' });
+
+    const posts = await query(`
+        SELECT p.* FROM posts p
+                            JOIN favorites f ON p.id = f.post_id
+        WHERE f.user_id = ?
+        ORDER BY p.created_at DESC
+    `, [user.id]);
+
+
+
+    console.log("📦 Пости:", posts.length);
+    res.json(posts);
+};
+
+
