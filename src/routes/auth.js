@@ -40,7 +40,7 @@ router.post('/firebase', async (req, res) => {
                 LIMIT 1
         `, [userId]);
 
-        const role = roleRows?.role || 'USER'; // тут виправлення — roleRows вже обʼєкт
+        const role = roleRows?.role || 'USER';
         console.log('Роль з БД:', role);
 
 
