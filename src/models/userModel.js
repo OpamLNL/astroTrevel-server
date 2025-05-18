@@ -1,26 +1,11 @@
-// const userRepository = require('../repositories/userRepository');
+const userRepository = require('../repositories/userRepository');
 const { generateTokens } = require('../services/authService');
-const bcrypt = require("bcryptjs");
-
-const getUserByUsername = async (userName) => {
-
-    try {
-        const user = await userRepository.getUserByUsername(userName);
-
-        if (!user) {
-            throw new Error('Користувач не знайдений.');
-        }
-        return user;
-    } catch (error) {
-        throw new Error('Помилка отримання користувача: ' + error.message);
-    }
-};
 
 const getUserById = async (userId) => {
     try {
         const user = await userRepository.getUserById(userId);
         if (!user) {
-            throw new Error('Користувач не знайдений.');
+            throw new Error('Користувача не знайдено');
         }
         return user;
     } catch (error) {
@@ -31,9 +16,8 @@ const getUserById = async (userId) => {
 const getUserByEmail = async (email) => {
     try {
         const user = await userRepository.getUserByEmail(email);
-
         if (!user) {
-            throw new Error('Користувач не знайдений.');
+            throw new Error('Користувача не знайдено');
         }
         return user;
     } catch (error) {
@@ -43,59 +27,46 @@ const getUserByEmail = async (email) => {
 
 const getAllUsers = async () => {
     try {
-        const users = await userRepository.getAllUsers();
-        return users;
+        return await userRepository.getAllUsers();
     } catch (error) {
         throw new Error('Помилка отримання списку користувачів: ' + error.message);
     }
 };
 
-const createUser = async (userData) => {
+const createUser = async ({ firebase_uid, email, name, avatar_url }) => {
     try {
-        const hashedPassword = await bcrypt.hash(userData.password, 10);
-
-        const newUser = await userRepository.createUser({
-            ...userData,
-            password: hashedPassword
+        const user = await userRepository.createUser({
+            firebase_uid,
+            email,
+            name,
+            avatar_url: avatar_url || '/images/users/default_avatar.png'
         });
-
-        return newUser;
+        return user;
     } catch (error) {
-        console.error('Error creating user:', error);
-        throw new Error('Error creating user: ' + error.message);
+        throw new Error('Помилка створення користувача: ' + error.message);
     }
 };
 
 const createUserAndAuthenticate = async (req, res) => {
     try {
-        const { username, email, password, avatar, birth_date, bio, phone_number, language, timezone } = req.body;
-
-        const hashedPassword = await bcrypt.hash(password, 10);
+        const { firebase_uid, email, name, avatar_url } = req.body;
 
         const userData = {
-            username,
+            firebase_uid,
             email,
-            password: hashedPassword,
-            avatar: avatar || 'default_avatar.png',
-            birth_date: birth_date || null,
-            bio: bio || '',
-            phone_number: phone_number || null,
-            language: language || 'uk',
-            timezone: timezone || 'UTC',
-            status: 'active',
-            last_visit: new Date()
+            name,
+            avatar_url: avatar_url || '/images/users/default_avatar.png'
         };
 
         const newUser = await userRepository.createUser(userData);
-
         const { accessToken, refreshToken } = generateTokens(newUser.id);
 
         res.status(201).json({
             user: {
                 id: newUser.id,
-                username: newUser.username,
+                name: newUser.name,
                 email: newUser.email,
-                avatar: newUser.avatar
+                avatar_url: newUser.avatar_url
             },
             accessToken,
             refreshToken
@@ -107,7 +78,6 @@ const createUserAndAuthenticate = async (req, res) => {
 };
 
 const updateUser = async (userId, userData) => {
-    console.log(userData);
     try {
         const updatedUser = await userRepository.updateUser(userId, userData);
         return { id: userId, ...userData };
@@ -125,22 +95,12 @@ const deleteUser = async (userId) => {
     }
 };
 
-const getActiveUsers = async () => {
-    try {
-        return await userRepository.getActiveUsers();
-    } catch (error) {
-        throw new Error('Помилка отримання активних користувачів: ' + error.message);
-    }
-};
-
 module.exports = {
     getUserById,
-    getUserByUsername,
     getUserByEmail,
     getAllUsers,
-    createUserAndAuthenticate,
     createUser,
+    createUserAndAuthenticate,
     updateUser,
-    deleteUser,
-    getActiveUsers
+    deleteUser
 };

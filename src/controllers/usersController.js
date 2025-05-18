@@ -1,170 +1,94 @@
-const userModel = require('../models/userModel');
-const authService = require('../services/authService');
+const userRepository = require('../repositories/userRepository');
+const { generateTokens } = require('../services/authService');
 
-const getUserByEmail = async (email) => {
-    return userModel.getUserByEmail(email);
-};
-
-
-const getUserByUsername = async (req, res) => {
+const getAllUsers = async (req, res) => {
     try {
-        const username = req.params.username;
-
-        if (!username) {
-            return res.status(400).json({ error: 'Missing user UserName' });
-        }
-
-        const user = await userModel.getUserByUsername(username);
-        console.log("in controller" );
-        console.log(user);
-
-        if (!user) {
-            return res.status(404).json({ error: 'User not found' });
-        }
-
-        res.status(200).json(user);
+        const users = await userRepository.getAllUsers();
+        res.json(users);
     } catch (error) {
-        console.error('Помилка отримання користувача за іменем:', error);
-        res.status(500).json({ error: 'Internal Server Error' });
+        res.status(500).json({ error: 'Помилка отримання користувачів' });
     }
 };
 
 const getUserById = async (req, res) => {
     try {
-        const userId = req.params.id;
-
-        if (!userId) {
-            return res.status(400).json({ error: 'Missing user ID' });
-        }
-
-        const user = await userModel.getUserById(userId);
-
-        if (!user) {
-            return res.status(404).json({ error: 'User not found' });
-        }
-
-        res.status(200).json(user);
+        const user = await userRepository.getUserById(req.params.id);
+        if (!user) return res.status(404).json({ error: 'Користувача не знайдено' });
+        res.json(user);
     } catch (error) {
-        console.error('Помилка отримання користувача за айді:', error);
-        res.status(500).json({ error: 'Internal Server Error' });
+        res.status(500).json({ error: 'Помилка отримання користувача' });
     }
 };
 
-const getAllUsers = async (req, res) => {
+const getUserByUsername = async (req, res) => {
     try {
-        const users = await userModel.getAllUsers();
-        res.status(200).json(users);
+        const user = await userRepository.getUserByUsername(req.params.username);
+        if (!user) return res.status(404).json({ error: 'Користувача не знайдено' });
+        res.json(user);
     } catch (error) {
-        console.error('Помилка отримання користувачів:', error);
-        res.status(500).json({ error: 'Internal Server Error' });
+        res.status(500).json({ error: 'Помилка отримання користувача' });
+    }
+};
+
+const getUserByEmail = async (req, res) => {
+    try {
+        const user = await userRepository.getUserByEmail(req.params.email);
+        if (!user) return res.status(404).json({ error: 'Користувача не знайдено' });
+        res.json(user);
+    } catch (error) {
+        res.status(500).json({ error: 'Помилка отримання користувача' });
     }
 };
 
 const createUserAndAuthenticate = async (req, res) => {
     try {
-        const { username, email, password, avatar, birth_date, bio, phone_number, language, timezone } = req.body;
+        const userData = req.body;
+        const user = await userRepository.createUser(userData);
 
-        const userData = {
-            username,
-            password: password,
-            avatar: avatar || 'default_avatar.png',
-            birth_date: birth_date || null,
-            status: 'active',
-            bio: bio || '',
-            role: 'default_role',
-            visit_statistics: 0,
-            email: email,
-            phone_number: phone_number || null,
-            language: language || 'uk',
-            timezone: timezone || 'UTC',
-            last_visit: new Date()
-        };
+        await userRepository.assignRoleToUser(user.id, 'USER');
 
-        const newUser = await userModel.createUser(userData);
-
-        const { accessToken, refreshToken } = authService.generateTokens(newUser.id);
-
-        res.status(201).json({ user: newUser, accessToken, refreshToken });
+        const tokens = generateTokens(user);
+        res.status(201).json({ user, tokens });
     } catch (error) {
-        console.error('Помилка створення користувача:', error);
-        res.status(500).json({ error: 'Internal Server Error' });
+        res.status(500).json({ error: 'Помилка створення користувача' });
     }
 };
 
 const updateUser = async (req, res) => {
     try {
-        const updatedUser = await userModel.updateUser(req.params.id, req.body);
-        res.status(200).json(updatedUser);
+        const updatedUser = await userRepository.updateUser(req.params.id, req.body);
+        res.json(updatedUser);
     } catch (error) {
-        console.error('Помилка оновлення користувача:', error);
-        res.status(500).json({ error: 'Internal Server Error' });
+        res.status(500).json({ error: 'Помилка оновлення користувача' });
     }
 };
 
 const deleteUser = async (req, res) => {
     try {
-        await userModel.deleteUser(req.params.id);
-        res.status(204).end();
+        await userRepository.deleteUser(req.params.id);
+        res.json({ message: 'Користувача видалено' });
     } catch (error) {
-        console.error('Помилка видалення користувача:', error);
-        res.status(500).json({ error: 'Internal Server Error' });
+        res.status(500).json({ error: 'Помилка видалення користувача' });
     }
 };
 
-const getActiveUsers = async (req, res) => {
+const updateUserRole = async (req, res) => {
     try {
-        const activeTimePeriod = new Date();
-        const activeUsers = await userModel.getActiveUsers(activeTimePeriod);
-        res.status(200).json(activeUsers);
+        const { role } = req.body;
+        await userRepository.updateUserRole(req.params.id, role);
+        res.json({ message: 'Роль оновлено' });
     } catch (error) {
-        console.error('Помилка отримання активних користувачів:', error);
-        res.status(500).json({ error: 'Internal Server Error' });
-    }
-};
-
-const createUserByAdmin = async (req, res) => {
-    try {
-        const { username, email, password, avatar, birth_date, bio, phone_number, language, timezone } = req.body;
-
-        const userData = {
-            username,
-            email,
-            password: password,
-            avatar: avatar || 'default_avatar.png',
-            birth_date: birth_date || null,
-            bio: bio || '',
-            phone_number: phone_number || null,
-            language: language || 'uk',
-            timezone: timezone || 'UTC',
-            status: 'active',
-            last_visit: new Date()
-        };
-
-        const newUser = await userModel.createUser(userData);
-
-        res.status(201).json({
-            message: 'Користувач успішно створений адміністратором',
-            user: {
-                id: newUser.id,
-                username: newUser.username,
-                email: newUser.email,
-                avatar: newUser.avatar
-            }
-        });
-    } catch (error) {
-        console.error('Помилка при створенні користувача:', error);
-        res.status(500).json({ error: 'Internal Server Error' });
+        res.status(500).json({ error: 'Помилка оновлення ролі' });
     }
 };
 
 module.exports = {
+    getAllUsers,
     getUserById,
     getUserByUsername,
     getUserByEmail,
-    getAllUsers,
     createUserAndAuthenticate,
-    createUserByAdmin,
     updateUser,
     deleteUser,
-    getActiveUsers,
+    updateUserRole
 };

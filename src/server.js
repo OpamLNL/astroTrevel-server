@@ -12,6 +12,8 @@ const authRoutes = require('./routes/auth');
 const { closePool } = require('./config/database');
 const { checkAndInitDatabase } = require('./migrations/db-checker');
 
+
+
 // CORS
 const allowedOrigins = ['http://localhost:5173'];
 app.use((req, res, next) => {
@@ -45,7 +47,7 @@ app.use(handleRequest);
 
 
 //authRoutes
-app.use('/api/auth', authRoutes);
+app.use('/routes/auth', authRoutes);
 
 // Start server
 const PORT = process.env.PORT;
