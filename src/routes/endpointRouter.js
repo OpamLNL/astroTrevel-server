@@ -2,10 +2,12 @@ const express = require('express');
 const router = express.Router();
 
 const { authenticate } = require('../middleware/authMiddleware');
-const isAdmin = require('../middleware/isAdmin');
 
+const  isAdmin  = require('../middleware/isAdmin');
+
+console.log('isAdmin', isAdmin);
 const usersController = require('../controllers/usersController');
-const authController = require("../controllers/authController");
+// const authController = require("../controllers/authController");
 const equipmentController = require("../controllers/equipmentController");
 
 const locationsController = require('../controllers/locationsController');
@@ -13,11 +15,15 @@ const toursController = require('../controllers/toursController');
 const postsController = require('../controllers/postsController');
 const tagsController = require('../controllers/tagsController');
 const photosController = require('../controllers/photosController');
-const likesController = require('../controllers/likesController');
+// const likesController = require('../controllers/likesController');
 const visitController = require('../controllers/visitController');
 // const messagesController = require('../controllers/messagesController');
 const rolesController = require('../controllers/rolesController');
 const authRoutes = require('./auth');
+
+
+
+
 
 // Головна
 router.get('/', (req, res) => {

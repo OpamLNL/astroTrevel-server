@@ -2,6 +2,8 @@ const userRepository = require('../repositories/userRepository');
 const { generateTokens } = require('../services/authService');
 
 const getAllUsers = async (req, res) => {
+    console.log('getAllUsers');
+
     try {
         const users = await userRepository.getAllUsers();
         res.json(users);

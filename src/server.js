@@ -58,6 +58,8 @@ const server = http.createServer(app);
 (async () => {
     await checkAndInitDatabase();
     server.listen(PORT, ipAddress, () => {
+        console.log(`🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 `);
+        console.log(`🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 `);
         console.log(`🚀 AstroTravel Server is running on ${ipAddress}:${PORT}`);
     });
 })();
