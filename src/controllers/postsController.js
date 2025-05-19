@@ -15,10 +15,14 @@ exports.getPostById = async (req, res) => {
 };
 
 exports.createPost = async (req, res) => {
-    const { id, title, content, image_url } = req.body;
-    await query('INSERT INTO posts (id, title, content, image_url) VALUES (?, ?, ?, ?)', [id, title, content, image_url]);
+    const { title, content, image_url } = req.body;
+    await query(
+        'INSERT INTO posts (title, content, image_url) VALUES (?, ?, ?)',
+        [title, content, image_url]
+    );
     res.status(201).json({ success: true });
 };
+
 
 exports.updatePost = async (req, res) => {
     const { title, content, image_url } = req.body;

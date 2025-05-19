@@ -39,13 +39,16 @@ async function createTables() {
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
         )`);
 
+
     await query(`CREATE TABLE IF NOT EXISTS posts (
-                                                      id INT PRIMARY KEY,
-                                                      title VARCHAR(255) NOT NULL,
+        id INT PRIMARY KEY AUTO_INCREMENT,
+        title VARCHAR(255) NOT NULL,
         content TEXT,
         image_url TEXT,
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-        )`);
+) `);
+
+
 
 
     await query(`CREATE TABLE IF NOT EXISTS locations (

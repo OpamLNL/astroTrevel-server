@@ -12,24 +12,25 @@ router.post('/firebase', async (req, res) => {
         const { uid, email, name, picture } = decoded;
 
         // Перевірка, чи існує користувач
-        const [users] = await query('SELECT * FROM users WHERE firebase_uid = ?', [uid]);
+        const users = await query('SELECT * FROM users WHERE firebase_uid = ?', [uid]);
 
-        console.log(users);
-        console.log(uid);
-
+        console.log("🔍 users:", users);
+        console.log("🔑 uid:", uid);
 
         let userId;
-        if (users.length === 0) {
+        if (!users || users.length === 0) {
             const result = await query(
                 'INSERT INTO users (firebase_uid, email, name, avatar_url) VALUES (?, ?, ?, ?)',
                 [uid, email, name || '', picture || null]
             );
             userId = result.insertId;
+
+            // Додати роль user (наприклад, role_id = 3)
+            await query('INSERT INTO user_roles (user_id, role_id) VALUES (?, ?)', [userId, 3]);
         } else {
-            userId = users.id;
-            console.log('userId');
-            console.log(userId);
+            userId = users[0].id;
         }
+
 
         // Отримуємо роль користувача з бази
         const [roleRows] = await query(`
