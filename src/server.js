@@ -49,6 +49,20 @@ app.use(handleRequest);
 //authRoutes
 app.use('/routes/auth', authRoutes);
 
+// Обробник 401 та 404
+app.use((err, req, res, next) => {
+    if (err.status === 401) {
+        res.status(401).sendFile(path.join(__dirname, '..', 'public', '404.html'));
+    } else {
+        next(err);
+    }
+});
+
+app.use((req, res, next) => {
+    res.status(404).sendFile(path.join(__dirname, '..', 'public', '404.html'));
+});
+
+
 // Start server
 const PORT = process.env.PORT;
 const ipAddress = process.env.DB_IP;
@@ -60,7 +74,8 @@ const server = http.createServer(app);
     server.listen(PORT, ipAddress, () => {
         console.log(`🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 `);
         console.log(`🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 `);
-        console.log(`🚀 AstroTravel Server is running on ${ipAddress}:${PORT}`);
+        // console.log(`🚀 AstroTravel Server is running on ${ipAddress}:${PORT}`);
+        console.log(`🚀 AstroTravel Server is running on port:${PORT}`);
     });
 })();
 
