@@ -7,8 +7,11 @@ const admin = require('firebase-admin');
 
 console.log("test process.env.GOOGLE_CREDENTIALS");
 
+const raw = JSON.parse(process.env.GOOGLE_CREDENTIALS);
+raw.private_key = raw.private_key.replace(/\\n/g, '\n');
+
 admin.initializeApp({
-    credential: admin.credential.cert(JSON.parse(process.env.GOOGLE_CREDENTIALS)),
+    credential: admin.credential.cert(raw),
 });
 //test
 module.exports = admin;
