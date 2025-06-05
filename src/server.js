@@ -15,7 +15,14 @@ const { checkAndInitDatabase } = require('./migrations/db-checker');
 
 
 // CORS
-const allowedOrigins = ['http://localhost:5173'];
+
+const allowedOrigins = [
+    'http://localhost:5173',
+    'https://astro-travel-pgfk.vercel.app',
+    'https://astro-travel-25fu8r94s-pgfk.vercel.app', // поточний білд
+    'https://astro-travel.vercel.app' // основний домен
+];
+
 app.use((req, res, next) => {
     const origin = req.headers.origin;
     if (allowedOrigins.includes(origin)) {
