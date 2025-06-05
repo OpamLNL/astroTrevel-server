@@ -5,6 +5,8 @@ const serviceAccount = require('./secrets/astrotravel-auth-firebase-adminsdk-fbs
 //    credential: admin.credential.cert(serviceAccount),
 //});
 
+console.log("test process.env.GOOGLE_CREDENTIALS");
+
 admin.initializeApp({
     credential: admin.credential.cert(JSON.parse(process.env.GOOGLE_CREDENTIALS)),
 });
