@@ -20,7 +20,8 @@ const allowedOrigins = [
     'http://localhost:5173',
     'https://astro-travel-pgfk.vercel.app',
     'https://astro-travel-25fu8r94s-pgfk.vercel.app', // поточний білд
-    'https://astro-travel.vercel.app' // основний домен
+    'https://astro-travel.vercel.app', // основний домен
+    'https://astro-travel-tawny.vercel.app'
 ];
 
 app.use((req, res, next) => {
